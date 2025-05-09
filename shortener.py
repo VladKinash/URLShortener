@@ -1,4 +1,5 @@
 
+#ai_assisted
 def Base62_encoder(number):
     Base62 = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
     shortened = []
@@ -13,7 +14,7 @@ def Base62_encoder(number):
 
     return ''.join(reversed(shortened))
 
-
+#no_ai
 def Base62_decoder(shortened):
     Base62 = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
 

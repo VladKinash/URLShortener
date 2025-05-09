@@ -1,3 +1,4 @@
+#no_ai
 import sqlite3
 from shortener import Base62_encoder
 from contextlib import contextmanager
@@ -45,4 +46,11 @@ def list_all_urls():
         for row in cursor:
             print(row)
 
+
+def increment_clicks(short_code):
+    with get_db() as conn:
+        conn.execute(
+            "UPDATE urls SET clicks = clicks + 1 WHERE short_code = ?",
+            (short_code,)
+        )
 
