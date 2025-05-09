@@ -12,6 +12,3 @@ def Base62_encoder(number):
         shortened.append(Base62[remainder])
 
     return ''.join(reversed(shortened))
-
-
-print(Base62_encoder(99923))

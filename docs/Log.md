@@ -4,7 +4,6 @@
         2. Flask: no experience.
         3. SQLite: decent experience.
 
-    Current goals: set up Python and Flask.
 
     AI prompts: 
         1. How do I set up Flask? https://claude.ai/share/f9b5d20a-1d5b-4e39-b979-6ea5b00f9984
