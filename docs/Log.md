@@ -23,6 +23,7 @@
         4.2 why doesn't the get_db get @app?
         4.3 when is @app.teardown_appcontext used?
         4.4 can you explain what does cursor mean here?
+        4.5 After getting basic context I decided to focus on implementing the database alone as a part of non-AI baseline
         
 
        5. hello, i am trying to make a url shortener, can you explain in detail how such software works, its purpose, etc. https://chatgpt.com/share/67f4d17d-04ec-8012-82c4-ba9d72c22537
