@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>URL Shortener</title>
+</head>
+<body>
+    <h1>Shorten a URL</h1>
+    <form method="POST">
+        <input type="url" name="url" required placeholder="Enter URL here">
+        <button type="submit">Shorten</button>
+    </form>
+
+    {% if short_code %}
+        <p>Shortened URL: <a href="{{ url_for('redirect_to_url', short_code=short_code, _external=True) }}">
+            {{ request.host_url }}{{ short_code }}
+        </a></p>
+    {% endif %}
+
+    <p>
+    <a href="{{ url_for('all_urls') }}">
+        <button type="button">View All URLs</button>
+    </a>
+</p>
+</body>
+</html>

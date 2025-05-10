@@ -39,12 +39,20 @@ def get_url_by_short_code(short_code):
             url = row[0]
             return url
 
+#original no-ai
+#def list_all_urls():
+#    with get_db() as conn:
+#       cursor = conn.execute("""SELECT * FROM urls""")
+#       return cursor.fetchall()
 
+
+#fixed by ai
 def list_all_urls():
     with get_db() as conn:
-        cursor = conn.execute("""SELECT * FROM urls""")
-        for row in cursor:
-            print(row)
+        conn.row_factory = sqlite3.Row
+        cursor = conn.execute("SELECT * FROM urls")
+        return cursor.fetchall()
+
 
 
 def increment_clicks(short_code):

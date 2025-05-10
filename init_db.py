@@ -15,6 +15,5 @@ CREATE TABLE urls (
 )
 ''')
 
-cursor.execute("INSERT INTO urls (original_url) VALUES ('test.com'), ('test.com')")
 connection.commit()
 connection.close()

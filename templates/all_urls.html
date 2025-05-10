@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>URL Shortener</title>
+</head>
+<body>
+    <h1>Stored URLs</h1>
+    <ul>
+{% for row in urls %}
+    {% if row['short_code'] %}
+        <li>
+            ID: {{ row['id'] }} —
+            Original: <a href="{{ row['original_url'] }}">{{ row['original_url'] }}</a> →
+            Short: <a href="{{ url_for('redirect_to_url', short_code=row['short_code'], _external=True) }}">
+                {{ request.host_url }}{{ row['short_code'] }}
+            </a> 
+            ({{ row['clicks'] }} clicks)
+        </li>
+    {% endif %}
+{% endfor %}
+    </ul>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All URLs</title>
+</head>
+<body>
+    <h1>Stored URLs</h1>
+    <ul>
+        {% for row in urls %}
+            <li>
+                {{ row[0] }} — 
+                <a href="{{ row[2] }}">{{ row[2] }}</a> → 
+                <a href="{{ url_for('redirect_to_url', short_code=row[1], _external=True) }}">
+                    {{ request.host_url }}{{ row[1] }}
+                </a> 
+                ({{ row[3] }} clicks)
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
