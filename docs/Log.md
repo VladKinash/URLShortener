@@ -38,3 +38,6 @@
             
 
     7.1 what operator do i need to use in python to see both remainder and the quotient? https://chatgpt.com/share/67f56d20-2cb8-8012-940a-0f8939d2b7be
+
+
+    8. Implementation of the web interface with full reliance on AI: https://chatgpt.com/share/6820cee3-b118-8012-a53b-26d164d75b12
